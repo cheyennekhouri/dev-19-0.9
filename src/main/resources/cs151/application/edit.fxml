@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.collections.FXCollections?>
+
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="cs151.application.EditController"
+            prefWidth="1000" prefHeight="680" style="-fx-background-color: #C9E8C7">
+
+<content>
+    <VBox  spacing="12"
+          AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20" AnchorPane.bottomAnchor="20" style="-fx-background-color: #C9E8C7">
+        <Label text="" style="-fx-font-size: 5px"/>
+
+        <Label text="Edit Page" style="-fx-font-size: 18px; -fx-font-weight: bold;" alignment="CENTER"/>
+
+                <GridPane hgap="10" vgap="8">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="120"/>
+                        <ColumnConstraints hgrow="ALWAYS"/>
+                    </columnConstraints>
+                    <children>
+
+                        <Label text="Name:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <Label fx:id="lblName" text="—" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Academic status:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+                        <ComboBox fx:id="cbAcademicStatus" prefWidth="150" style="-fx-border-color: #0C5007"
+                                  GridPane.rowIndex="1" GridPane.columnIndex="1">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Freshman" />
+                                    <String fx:value="Sophmore" />
+                                    <String fx:value="Junior" />
+                                    <String fx:value="Senior" />
+                                    <String fx:value="Graduate" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+
+                        <Label text="Current job:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <RadioButton fx:id="rbEmployed" text="Employed" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                        <RadioButton fx:id="rbUnemployed" text="UnEmployed" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <Label text="Job details:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <TextArea fx:id="tfJobDetails" editable="true"
+                                  promptText="ex: role, company, duration, responsibilities.."
+                                  GridPane.rowIndex="4" GridPane.columnIndex="1" style="-fx-border-color: #0C5007"  maxHeight="240"/>
+                    </children>
+                </GridPane>
+
+        <Label text="" style="-fx-font-size: 5px"/>
+
+        <Label text="Achievements:"/>
+                <TextArea fx:id="lvAchievements" prefHeight="90" editable="true"
+                           promptText="List achievements.."
+                          style="-fx-border-color: #0C5007" />
+
+        <Label text="" style="-fx-font-size: 5px"/>
+
+        <Label text="Skills:" />
+                <TextArea fx:id="lvSkills" prefHeight="90" editable="true"
+                          promptText="List skills.."
+                         style="-fx-border-color: #0C5007" />
+
+        <Label text="" style="-fx-font-size: 5px"/>
+
+        <Label text="Career goals:" />
+                    <ComboBox fx:id="cbPreferredRole" prefWidth="150" style="-fx-border-color: #0C5007" >
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Front-end" />
+                                <String fx:value="Back-end" />
+                                <String fx:value="Full-stack" />
+                                <String fx:value="Data" />
+                                <String fx:value="Other" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+
+        <Label text="" style="-fx-font-size: 5px"/>
+
+        <Label text="Programming languages:" />
+                <ListView fx:id="lvProgrammingLanguages" maxHeight="150.0" maxWidth="200.0"
+                       style="-fx-border-color: #0C5007" />
+
+
+        <Label text="" style="-fx-font-size: 5px"/>
+
+        <CheckBox fx:id="cbWhitelist" text="Whitelisted"/>
+        <CheckBox fx:id="cbBlacklist" text="Blacklisted"/>
+
+        <Label text="" style="-fx-font-size: 5px"/>
+
+        <Button text="Save" onAction="#save" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
+        <Button text="Back to Search" onAction="#searchProf" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
+        <Label text="" style="-fx-font-size: 5px"/>
+
+    </VBox>
+</content>
+</ScrollPane>
