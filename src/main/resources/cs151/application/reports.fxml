@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cs151.application.ReportController"
+            prefHeight="400.0" prefWidth="600.0" spacing="12"
+            alignment="CENTER" style="-fx-background-color: #C9E8C7">
+
+    <Label text="Reports Page" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    <Label text="Generate Blacklisted and Whitelisted Student Reports"  />
+
+    <HBox spacing="8" alignment="CENTER">
+        <Button text="Blacklisted Reports" onAction="#getBReport" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
+        <Button text="Whitelisted Reports" onAction="#getWReport" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
+    </HBox>
+
+    <TableView fx:id="tableView" prefHeight="280.0" prefWidth="560.0" style="-fx-border-color: #0C5007;" maxWidth="500">
+        <columns>
+            <TableColumn fx:id="nameCol" text="Name" prefWidth="250" />
+            <TableColumn fx:id="listCol" text="Student is listed as..." prefWidth="250" />
+        </columns>
+    </TableView>
+
+    <Button text="Back to Home" onAction="#goBackToHome" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
+
+</VBox>

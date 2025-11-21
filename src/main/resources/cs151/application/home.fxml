@@ -23,6 +23,9 @@
         <Button text="Search"
             onAction="#searchProf" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
 
+        <Button text="Reports"
+                onAction="#report" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
+
         <Button text="Back to Front Page"
             onAction="#onNavigateButtonClick" style="-fx-border-color: #0C5007; -fx-text-fill: #0C5007;"/>
     </VBox>

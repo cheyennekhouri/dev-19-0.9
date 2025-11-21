@@ -89,7 +89,7 @@ public class MainController {
     //home page
     @FXML
     private void goBackToHome(ActionEvent event) {
-        swapScene(event, "/cs151/application/home.fxml", 340, 260, "KnowledgeTrack Home");
+        swapScene(event, "/cs151/application/home.fxml", 380, 340, "KnowledgeTrack Home");
     }
     //programming languages table, contains: table, back to define lang
     @FXML
@@ -116,6 +116,11 @@ public class MainController {
     @FXML
     protected void searchProf(ActionEvent event) {
         swapScene(event, "/cs151/application/search.fxml", 1000, 680, "Search Student Profiles");
+    }
+
+    @FXML
+    protected void report(ActionEvent event) {
+        swapScene(event, "/cs151/application/reports.fxml", 600, 500, "Show Reports");
     }
 
     private boolean requiredFields() {

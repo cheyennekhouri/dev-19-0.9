@@ -1,5 +1,15 @@
 # Name of application: KnowledgeTrack
 
+# Version: 0.9
+
+# who did what:
+1. Sean Reece Calantoc: 
+2. Kanishka Yadav: 
+3. Hoang Khang Pham:
+4. Cheyenne Khouri: Created reports page and report contoller, loaded profiles based on blacklist and whitelist
+
+# Any other instruction that users need to know:
+
 # Version: 0.8
 
 # who did what:
