@@ -87,6 +87,7 @@ public final class DataStore {
         }
     }
     private static void seedDefaultProfilesIfAbsent() {
+        // If profiles.csv already exists, do nothing
         if (Files.exists(PROFILE_FILE)) return;
 
         try {
@@ -96,10 +97,12 @@ public final class DataStore {
                     PROFILE_FILE, StandardCharsets.UTF_8,
                     StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING)) {
 
+
                 bw.write(String.join(",", "name", "major", "academicStatus", "employment",
                         "jobDetails", "languages", "preferredRole",
                         "achievements", "skills", "comments", "whiteList", "blackList"));
                 bw.newLine();
+
 
                 bw.write(String.join(",",
                         csv("Hoang"),
@@ -109,13 +112,46 @@ public final class DataStore {
                         csv("TA at SJSU"),
                         csv("Java|Python|SQL"),
                         csv("Backend"),
-                        csv("Prefers APIs"),
+                        csv("Prefers APIs and backend services"),
                         csv("REST APIs, debugging"),
                         csv(""),
                         csv("true"),
                         csv("false")
                 ));
                 bw.newLine();
+
+                bw.write(String.join(",",
+                        csv("Rhys"),
+                        csv("Software Engineering"),
+                        csv("Senior"),
+                        csv("Employed"),
+                        csv("QA Engineer"),
+                        csv("Java|Spring|JUnit"),
+                        csv("QA/DevOps"),
+                        csv("Testing focus"),
+                        csv("JUnit, CI/CD"),
+                        csv(""),
+                        csv("true"),
+                        csv("false")
+                ));
+                bw.newLine();
+
+                bw.write(String.join(",",
+                        csv("Maria"),
+                        csv("Computer Science"),
+                        csv("Sophomore"),
+                        csv("Not Employed"),
+                        csv(""),
+                        csv("Python|JavaScript"),
+                        csv("Full Stack"),
+                        csv("Interested in web apps"),
+                        csv("HTML, CSS, React"),
+                        csv(""),
+                        csv("true"),
+                        csv("false")
+                ));
+                bw.newLine();
+
 
 
                 bw.write(String.join(",",
@@ -126,48 +162,13 @@ public final class DataStore {
                         csv(""),
                         csv("JavaScript|TypeScript|React"),
                         csv("Frontend"),
-                        csv("Good with UX"),
-                        csv("React, Figma"),
+                        csv("Likes UI work"),
+                        csv("React, TypeScript"),
                         csv(""),
                         csv("false"),
-                        csv("false")
+                        csv("true")
                 ));
                 bw.newLine();
-
-
-                bw.write(String.join(",",
-                        csv("Kanishka"),
-                        csv("Data Science"),
-                        csv("Sophomore"),
-                        csv("Employed"),
-                        csv("Data Intern"),
-                        csv("Python|R|Pandas"),
-                        csv("Data"),
-                        csv("Loves ML projects"),
-                        csv("Pandas, NumPy"),
-                        csv(""),
-                        csv("false"),
-                        csv("false")
-                ));
-                bw.newLine();
-
-
-                bw.write(String.join(",",
-                        csv("Ryhs"),
-                        csv("Software Engineering"),
-                        csv("Senior"),
-                        csv("Employed"),
-                        csv("QA Engineer"),
-                        csv("Java|Spring|JUnit"),
-                        csv("QA/DevOps"),
-                        csv("Testing focus"),
-                        csv("JUnit, CI/CD"),
-                        csv(""),
-                        csv("false"),
-                        csv("false")
-                ));
-                bw.newLine();
-
 
                 bw.write(String.join(",",
                         csv("Lyly"),
@@ -181,8 +182,25 @@ public final class DataStore {
                         csv("Microcontrollers, C++"),
                         csv(""),
                         csv("false"),
-                        csv("false")
+                        csv("true")
                 ));
+                bw.newLine();
+
+                bw.write(String.join(",",
+                        csv("David"),
+                        csv("Software Engineering"),
+                        csv("Senior"),
+                        csv("Employed"),
+                        csv("Part-time IT support"),
+                        csv("Java|SQL"),
+                        csv("Backend"),
+                        csv("Database-heavy projects"),
+                        csv("SQL, Git"),
+                        csv(""),
+                        csv("false"),
+                        csv("true")
+                ));
+                bw.newLine();
             }
         } catch (IOException e) {
             e.printStackTrace();

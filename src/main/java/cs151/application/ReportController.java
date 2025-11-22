@@ -36,6 +36,19 @@ public class ReportController {
         allProfiles = DataStore.getFullName();
 
         tableView.setItems(allProfiles);
+
+        tableView.setRowFactory(tv -> {
+            javafx.scene.control.TableRow<StudentProfile> row = new javafx.scene.control.TableRow<>();
+
+            row.setOnMouseClicked(event -> {
+                if (event.getClickCount() == 2 && !row.isEmpty()) {
+                    StudentProfile selected = row.getItem();
+                    openStudentDetailPage(selected);
+                }
+            });
+
+            return row;
+        });
     }
 
     @FXML
@@ -69,6 +82,28 @@ public class ReportController {
 
         tableView.setItems(FXCollections.observableArrayList(filtered));
     }
+
+    private void openStudentDetailPage(StudentProfile student) {
+        try {
+            FXMLLoader loader = new FXMLLoader(
+                    getClass().getResource("/cs151/application/student-report-detail.fxml")
+            );
+            Parent root = loader.load();
+
+            // Pass the selected student to the new controller
+            StudentReportDetailController controller = loader.getController();
+            controller.setStudent(student);
+
+            // Switch scene in the same window
+            Stage stage = (Stage) tableView.getScene().getWindow();
+            stage.setTitle("Student Report Detail");
+            stage.setScene(new Scene(root, 600, 400));
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @FXML
     private void goBackToHome(ActionEvent event) {
