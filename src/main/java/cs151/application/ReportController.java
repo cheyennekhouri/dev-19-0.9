@@ -35,6 +35,20 @@ public class ReportController {
         DataStore.load();
         allProfiles = DataStore.getFullName();
 
+        nameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
+        listCol.setCellValueFactory(cellData -> {
+            StudentProfile sp = cellData.getValue();
+            String status;
+            if (sp.isWhiteList()) {
+                status = "Whitelisted";
+            } else if (sp.isBlackList()) {
+                status = "Blacklisted";
+            } else {
+                status = "None";
+            }
+            return new javafx.beans.property.SimpleStringProperty(status);
+        });
+
         tableView.setItems(allProfiles);
 
         tableView.setRowFactory(tv -> {
