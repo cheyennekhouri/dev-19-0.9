@@ -3,7 +3,7 @@
 # Version: 0.9
 
 # who did what:
-1. Sean Reece Calantoc: 
+1. Sean Reece Calantoc: Added the student detail page with comment previews and full comment view
 2. Kanishka Yadav: Added comments for the student profiles and implemented StudentReportController
 3. Hoang Khang Pham: Created Double-click student row and wire values, also Student info page. Implemented 3 blacklisted and 3 whitelisted students
 4. Cheyenne Khouri: Created reports page and report contoller, loaded profiles based on blacklist and whitelist
