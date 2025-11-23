@@ -4,7 +4,7 @@
 
 # who did what:
 1. Sean Reece Calantoc: 
-2. Kanishka Yadav: 
+2. Kanishka Yadav: Added comments for the student profiles and added StudentReportController
 3. Hoang Khang Pham: Created Double-click student row and wire values, also Student info page. Implemented 3 blacklisted and 3 whitelisted students
 4. Cheyenne Khouri: Created reports page and report contoller, loaded profiles based on blacklist and whitelist
 
