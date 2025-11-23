@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cs151.application.StudentReportDetailController">
+
+    <top>
+        <VBox spacing="6">
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Label fx:id="lblName"/>
+                <Label fx:id="lblMajor"/>
+                <Label fx:id="lblStatus"/>
+                <Label fx:id="lblEmployment"/>
+                <Label fx:id="lblJobDetails" wrapText="true"/>
+                <Label fx:id="lblLanguages" wrapText="true"/>
+                <Label fx:id="lblPreferredRole"/>
+            </children>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="5">
+            <padding>
+                <Insets top="0" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Label text="Comments (click a row to view full comment)"/>
+                <TableView fx:id="commentsTable" prefHeight="250.0">
+                    <columns>
+                        <TableColumn fx:id="dateColumn" text="Date" prefWidth="150.0"/>
+                        <TableColumn fx:id="commentColumn" text="Comment (preview)" prefWidth="450.0"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" spacing="10">
+            <padding>
+                <Insets top="5" right="10" bottom="10" left="10"/>
+            </padding>
+            <children>
+                <Button text="Back to Reports" onAction="#handleBackToReports"/>
+            </children>
+        </HBox>
+    </bottom>
+
+</BorderPane>
