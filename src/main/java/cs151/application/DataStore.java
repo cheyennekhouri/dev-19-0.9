@@ -114,7 +114,11 @@ public final class DataStore {
                         csv("Backend"),
                         csv("Prefers APIs and backend services"),
                         csv("REST APIs, debugging"),
-                        csv(""),
+                        csv("2025-01-15:::Hoang has been an exceptional TA this semester " +
+                                "He is consistently going above and beyond in helping students understand difficult " +
+                                "concepts in data structures and algorithms. His explanations are clear and he has " +
+                                "received positive feedback from students who appreciate his approachable demeanor and " +
+                                "technical knowledge of backend development.|||2025-02-10:::Interested in microservices"),
                         csv("true"),
                         csv("false")
                 ));
@@ -130,7 +134,11 @@ public final class DataStore {
                         csv("QA/DevOps"),
                         csv("Testing focus"),
                         csv("JUnit, CI/CD"),
-                        csv(""),
+                        csv("2025-01-22:::Rhys has demonstrated a strong aptitude for quality assurance " +
+                                "and testing methodologies throughout his time at the company. He has been instrumental " +
+                                "in identifying critical bugs and improving the testing frameworks. Rhys is proactive in " +
+                                "staying updated with the latest QA tools and practices, which has greatly benefited our " +
+                                "development process.|||2025-03-05:::Looking to transition into DevOps role"),
                         csv("true"),
                         csv("false")
                 ));
@@ -146,7 +154,11 @@ public final class DataStore {
                         csv("Full Stack"),
                         csv("Interested in web apps"),
                         csv("HTML, CSS, React"),
-                        csv(""),
+                        csv("2025-01-22:::Maria is a very passionate student and has a great interest in learning " +
+                                "new technologies. She has completed the advanced algorithms project two weeks ahead of " +
+                                "schedule and volunteered to help struggling classmates understand dynamic programming " +
+                                "concepts. Her code is well-documented and follows industry best practices, showing " +
+                                "maturity beyond her sophomore status.|||2025-02-15:::Considering graduate school"),
                         csv("true"),
                         csv("false")
                 ));
@@ -164,7 +176,11 @@ public final class DataStore {
                         csv("Frontend"),
                         csv("Likes UI work"),
                         csv("React, TypeScript"),
-                        csv(""),
+                        csv("2025-01-22::: Che has struggled with meeting project deadlines and maintaining consistent " +
+                                "communication with team members this semester. While she demonstrates technical capability " +
+                                "in frontend development, her pattern of submitting work late without prior notification " +
+                                "has disrupted group project timelines. Multiple teammates have expressed frustration about " +
+                                "having to adjust their schedules to accommodate her delays.|||2025-02-18:::Attendance concerns raised"),
                         csv("false"),
                         csv("true")
                 ));
@@ -180,7 +196,11 @@ public final class DataStore {
                         csv("Embedded"),
                         csv("Boards & sensors"),
                         csv("Microcontrollers, C++"),
-                        csv(""),
+                        csv("2025-01-22:::Lyly has encountered significant difficulties working effectively in team " +
+                                "environments throughout the semester. Her code submissions often lack proper documentation " +
+                                "and comments, making it difficult for teammates to integrate her work. She has missed " +
+                                "several critical project meetings without notification, forcing the team to proceed without " +
+                                "her input and later redo integration work.|||2025-03-12:::Needs improvement in collaboration skills"),
                         csv("false"),
                         csv("true")
                 ));
@@ -196,7 +216,12 @@ public final class DataStore {
                         csv("Backend"),
                         csv("Database-heavy projects"),
                         csv("SQL, Git"),
-                        csv(""),
+                        csv("2025-01-22:::David has shown inconsistent code quality and testing practices that have " +
+                                "led to production issues on multiple occasions. His database queries often lack proper " +
+                                "optimization, resulting in performance bottlenecks. While he possesses fundamental SQL " +
+                                "knowledge, his tendency to skip thorough testing before deployment has created additional " +
+                                "work for the QA team and delayed several release cycles.|||2025-02-25:::Performance " +
+                                "improvement plan initiated"),
                         csv("false"),
                         csv("true")
                 ));
